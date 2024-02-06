@@ -90,7 +90,6 @@ class _JogoState extends State<Jogo> {
                     height: 100,
                   ),
                 ),
-                SizedBox(width: 10),
                 GestureDetector(
                   onTap: () => opcaoSelecionada("tesoura"),
                   child: Image.asset(
