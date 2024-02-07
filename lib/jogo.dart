@@ -1,5 +1,6 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
+
 class Jogo extends StatefulWidget {
   const Jogo({super.key});
   @override
@@ -18,17 +19,17 @@ class _JogoState extends State<Jogo> {
     switch (escolhaApp) {
       case "pedra":
         setState(() {
-          _imagemApp = AssetImage("assets/pedra.png");
+          _imagemApp = const AssetImage("assets/pedra.png");
         });
         break;
       case "papel":
         setState(() {
-          _imagemApp = AssetImage("assets/papel.png");
+          _imagemApp = const AssetImage("assets/papel.png");
         });
         break;
       case "tesoura":
         setState(() {
-          _imagemApp = AssetImage("assets/tesoura.png");
+          _imagemApp = const AssetImage("assets/tesoura.png");
         });
         break;
     }
@@ -50,6 +51,7 @@ class _JogoState extends State<Jogo> {
       _mensagem = "Opa empatamos :|";
     }
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -68,9 +70,9 @@ class _JogoState extends State<Jogo> {
             ),
             Image(image: _imagemApp),
             Padding(
-              padding: EdgeInsets.all(15.0),
+              padding: const EdgeInsets.all(15.0),
               child: Text(_mensagem,
-                  style: TextStyle(fontWeight: FontWeight.bold)),
+                  style: const TextStyle(fontWeight: FontWeight.bold)),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -82,7 +84,6 @@ class _JogoState extends State<Jogo> {
                     height: 100,
                   ),
                 ),
-                
                 GestureDetector(
                   onTap: () => opcaoSelecionada("papel"),
                   child: Image.asset(

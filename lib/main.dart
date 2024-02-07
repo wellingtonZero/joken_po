@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         
       ),
-      home: Jogo(),
+      home: const Jogo(),
     );
   }
 }
